@@ -1,4 +1,4 @@
-name:  Deployment
+name:  Bug
 about: Deployment Notification for components managed by QPPA team 
 title: "Deploy Notification"
 labels: deploy
