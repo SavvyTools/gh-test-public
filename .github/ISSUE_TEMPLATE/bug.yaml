@@ -47,11 +47,11 @@ body:
         - hotfix
 
   - type: dropdown
-    id: component
+    id: tier
     validations:
       required: true
     attributes:
-      label: Which environment are you releasing ?
+      label: Which tier are you releasing ?
       multiple: false
       options:
         - PROD
