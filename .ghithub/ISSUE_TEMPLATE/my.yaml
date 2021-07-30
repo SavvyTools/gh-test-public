@@ -1,0 +1,94 @@
+name:  Deployment
+about: Deployment Notification for components managed by QPPA team 
+title: "Deploy Notification"
+labels: deploy
+body:
+
+  - type: input
+    id: program
+    attributes:
+      label: Program Name 
+      placeholder: XPP
+      value: XPP
+    validations:
+      required: true
+                
+  - type: input
+    id: team
+    attributes:
+      label: Team 
+      placeholder: XPPA
+      value: XPPA
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    validations:
+      required: true
+    attributes:
+      label: Which component are you releasing ?
+      multiple: false
+      options:
+        - Scores API
+        - Subs API
+        - Insights API
+        
+  - type: dropdown
+    id: releaseType
+    validations:
+      required: true
+    attributes:
+      label: What type of release is this ?
+      multiple: false
+      options:
+        - standard
+        - restoration
+        - hotfix
+
+  - type: dropdown
+    id: component
+    validations:
+      required: true
+    attributes:
+      label: Which environment are you releasing ?
+      multiple: false
+      options:
+        - PROD
+                
+  - type: input
+    id: confluenceReleasePageId
+    attributes:
+      label: Confluence release page ID
+      description: You can obtain that from page information section of a confluence page
+    validations:
+      required: true
+      
+  - type: input
+    id: eventTime
+    attributes:
+      label: Deploy event date and time?
+      description: In UTC, if you are manually entering EST, please offset it by -04:00 (or -05:00). Example: July 12th 1:58 PM (EST) is  2001-06-12T13:58:00-04:00 (UTC)
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: eventType
+    attributes:
+      label: Provide the event notification type ?
+      multiple: false
+      options:
+        - start
+        - finish
+    validations:
+      required: true
+
+  - type: input
+    id: correlationId
+    attributes:
+      label: Correlation Identifier 
+      description: CorrelationId must be same for start and finish events, omitted, will default to Confluence release page ID
+    validations:
+      required: true
+            
+      
