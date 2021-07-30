@@ -1,6 +1,7 @@
-name:  Deploy
-title: Deploy Notification
-labels: deploy
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: [bug, triage]
 body:
 
   - type: input
