@@ -1,6 +1,6 @@
-name:  Bug
+name:  Deploy
 about: Deployment Notification for components managed by QPPA team 
-title: "Deploy Notification"
+title: Deploy Notification
 labels: deploy
 body:
 
